@@ -10,7 +10,12 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="h-screen">
-      <div className="relative min-h-screen w-screen bg-ai-gril bg-no-repeat bg-center bg-cover">
+      <div
+        className="relative min-h-screen w-screen bg-ai-gril bg-no-repeat bg-center bg-cover"
+        style={{
+          boxShadow: 'inset 0px -20px 44px rgba(0, 0, 0, 1)',
+        }}
+      >
         <div className="absolute top-1/2 -translate-y-1/2 left-40">
           <img src="/onlytwins.ai.svg" alt="OnlyTwins.ai" />
           <div>
