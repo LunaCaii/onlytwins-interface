@@ -13,7 +13,7 @@ export default function Index() {
       <div
         className="relative min-h-screen w-screen bg-ai-gril bg-no-repeat bg-center bg-cover"
         style={{
-          boxShadow: 'inset 0px -20px 44px rgba(0, 0, 0, 1)',
+          boxShadow: 'inset 0px -20px 30px rgba(17, 19, 21, 1)',
         }}
       >
         <div className="absolute top-1/2 -translate-y-1/2 left-40">
