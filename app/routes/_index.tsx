@@ -23,6 +23,10 @@ const aoGirlfriendIntr = [
 ]
 
 export default function Index() {
+  const openChat = () => {
+    window.open('https://t.me/spicy_pixel_bot', '_blank')
+  }
+
   return (
     <div className="h-screen">
       <div
@@ -47,9 +51,7 @@ export default function Index() {
           </div>
           <button
             className="rounded-full bg-[#007BFF] mt-24 px-[90px] py-[18px] text-white font-montserrat text-[23px] font-normal leading-normal"
-            onClick={() =>
-              window.open('https://t.me/spicy_pixel_bot', '_blank')
-            }
+            onClick={openChat}
           >
             Chat Now
           </button>
@@ -58,7 +60,7 @@ export default function Index() {
 
       <div
         id="AIGirlfriend"
-        className="main-layout flex flex-col items-center text-green-700 !py-[100px]"
+        className="main-layout flex flex-col items-center !py-[100px]"
       >
         <h2 className="text-white font-montserrat-bold text-[71px] font-extrabold leading-normal">
           AI Girlfriend
@@ -79,6 +81,41 @@ export default function Index() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="main-layout">
+        <img src="/twins-mb.svg" className="select-none" alt="" />
+
+        <p className="text-white font-montserrat-bold text-[71px] font-extrabold leading-[71px] mt-32">
+          Have you ever dreamed <br /> about the best girlfriend ever?
+        </p>
+
+        <div className="grid grid-cols-2">
+          <p className="text-white font-poppins text-[23px] font-normal mt-16 leading-8">
+            Experience the future of companionship with Only Twins. Our
+            <br />
+            advanced artificial intelligence is designed to be your supportive,
+            <br />
+            fun, and understanding partner.
+            <br />
+            <br />
+            Enjoy intelligent conversation and a drama-free relationship.
+            <br />
+            Discover how Romantic AI can enrich your life and become your
+            <br />
+            ultimate soulmate. Explore our features!
+          </p>
+
+          <div className="w-full flex justify-center">
+            <button
+              className="rounded-full bg-[#007BFF] mt-24 px-[90px] py-[18px] text-white font-montserrat text-[23px] font-normal leading-normal flex items-center justify-center w-fit h-fit"
+              onClick={openChat}
+            >
+              <span>Chat Now</span>
+              <img src="/chat.svg" className="ml-5" alt="chat" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )
