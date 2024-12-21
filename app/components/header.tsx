@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useSpring, animated } from '@react-spring/web'
+import { Link } from '@remix-run/react'
 
 const menus = [
   {
     text: 'AI Girlfriend',
-    link: '/',
+    link: '#AIGirlfriend',
   },
   {
     text: 'Blog',
@@ -35,6 +36,7 @@ export function Header() {
     top: scrollY > 50 ? '0 !important' : '48px',
     opacity: scrollY > 50 ? 1 : 0.8,
     transition: 'all 0.3s ease',
+    // background: scrollY > 50 ? 'rgba(89, 89, 89, 1)' : 'rgba(89, 89, 89, 0.50)',
   })
 
   useEffect(() => {
@@ -58,7 +60,7 @@ export function Header() {
           className="font-montserrat text-white text-[23px] font-normal leading-normal cursor-pointer select-none"
           key={i.text}
         >
-          {i.text}
+          <Link to={i.link}>{i.text}</Link>
         </li>
       ))}
     </animated.ul>

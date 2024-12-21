@@ -7,6 +7,21 @@ export const meta: MetaFunction = () => {
   ]
 }
 
+const aoGirlfriendIntr = [
+  {
+    label: 'Realistic AI Girlfriend Chat',
+    desc: 'Experience advanced conversational AI designed to feel natural, fun, and engaging',
+  },
+  {
+    label: 'AI Girl Customization',
+    desc: 'Design unique AI girls with stunning visuals and personality traits that match your vibe.',
+  },
+  {
+    label: 'AI Girlfriend Online Free',
+    desc: '',
+  },
+]
+
 export default function Index() {
   return (
     <div className="h-screen">
@@ -16,7 +31,7 @@ export default function Index() {
           boxShadow: 'inset 0px -20px 30px rgba(17, 19, 21, 1)',
         }}
       >
-        <div className="absolute top-1/2 -translate-y-1/2 left-40">
+        <div className="main-layout absolute top-1/2 -translate-y-1/2 left-0 right-0">
           <img src="/onlytwins.ai.svg" alt="OnlyTwins.ai" />
           <div>
             <p className="text-white font-montserrat text-[69px] font-bold leading-normal">
@@ -41,7 +56,30 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="h-80 text-green-700">AI Girlfriend</div>
+      <div
+        id="AIGirlfriend"
+        className="main-layout flex flex-col items-center text-green-700 !py-[100px]"
+      >
+        <h2 className="text-white font-montserrat-bold text-[71px] font-extrabold leading-normal">
+          AI Girlfriend
+        </h2>
+
+        <ul className="grid grid-cols-3 gap-12">
+          {aoGirlfriendIntr.map((i) => (
+            <li
+              className="bg-rectangle-bg bg-no-repeat bg-cover px-12 py-14"
+              key={i.label}
+            >
+              <p className="text-white font-montserrat text-[29px] font-black leading-normal">
+                {i.label}
+              </p>
+              <p className="text-white font-poppins text-[23px] font-normal leading-normal mt-14">
+                {i.desc}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

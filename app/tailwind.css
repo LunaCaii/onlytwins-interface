@@ -6,6 +6,16 @@ html,
 body {
   @apply bg-[#111315] dark:bg-gray-950;
 
+  scroll-behavior: smooth;
+
+  .main-layout {
+    padding: 20px 160px;
+    margin: 0 auto;
+    width: 1920px;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
