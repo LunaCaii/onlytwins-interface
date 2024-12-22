@@ -4,6 +4,7 @@ import { Twins } from '~/components/twins'
 import { Blog } from '~/components/blog'
 import { Roadmap } from '~/components/roadmap'
 import { FAQ } from '~/components/faq'
+import { Nsfw } from '~/components/nsfw'
 
 export const meta: MetaFunction = () => {
   return [
@@ -97,6 +98,7 @@ export default function Index() {
       <Twins />
       <Blog />
       <FAQ />
+      <Nsfw />
     </div>
   )
 }
