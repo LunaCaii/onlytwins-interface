@@ -3,6 +3,7 @@ import { AiGirlFriend } from '~/components/aiGrilFriend'
 import { Twins } from '~/components/twins'
 import { Blog } from '~/components/blog'
 import { Roadmap } from '~/components/roadmap'
+import { FAQ } from '~/components/faq'
 
 export const meta: MetaFunction = () => {
   return [
@@ -95,6 +96,7 @@ export default function Index() {
       <Roadmap />
       <Twins />
       <Blog />
+      <FAQ />
     </div>
   )
 }
