@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node'
+import { Twins } from '~/components/twins'
 
 export const meta: MetaFunction = () => {
   return [
@@ -218,6 +219,8 @@ export default function Index() {
           </ul>
         </div>
       </div>
+
+      <Twins />
     </div>
   )
 }
