@@ -20,12 +20,12 @@ export function Blog() {
   ]
 
   return (
-    <div id="Blog" className="main-layout flex flex-col">
+    <div id="Blog" className="main-layout flex flex-col !mt-44">
       <h2 className="text-white font-montserrat-bold text-[71px] font-extrabold leading-normal">
         Blog
       </h2>
 
-      <ul className="grid grid-cols-4 gap-16">
+      <ul className="grid grid-cols-4 gap-16 mt-16">
         {blogs.map((x) => (
           <li
             className="bg-[#515354] rounded-[20px] px-6 pt-6 pb-9 relative"

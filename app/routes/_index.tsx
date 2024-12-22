@@ -5,6 +5,7 @@ import { Blog } from '~/components/blog'
 import { Roadmap } from '~/components/roadmap'
 import { FAQ } from '~/components/faq'
 import { Nsfw } from '~/components/nsfw'
+import { Footer } from '~/components/footer'
 
 export const meta: MetaFunction = () => {
   return [
@@ -99,6 +100,7 @@ export default function Index() {
       <Blog />
       <FAQ />
       <Nsfw />
+      <Footer />
     </div>
   )
 }
