@@ -21,7 +21,8 @@ export default {
       },
       backgroundImage: {
         'ai-gril': "url('/ai-gril.svg')",
-        'rectangle-bg': "url('/rectangle.svg')"
+        'rectangle-bg': "url('/rectangle.svg')",
+        'router-map-bg': "url('/router-map-bg.svg')"
       },
       colors: {
         'nav-bg': 'rgba(89, 89, 89, 0.50)',
