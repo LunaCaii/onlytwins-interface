@@ -22,7 +22,7 @@ export default {
       backgroundImage: {
         'ai-gril': "url('/ai-gril.svg')",
         'rectangle-bg': "url('/rectangle.svg')",
-        'router-map-bg': "url('/router-map-bg.svg')",
+        'router-map-bg': "url('/rm-index2-wap-bg.svg')",
         'footer': "url('/footer.png')",
         'chain': "url('/chain.svg')"
       },

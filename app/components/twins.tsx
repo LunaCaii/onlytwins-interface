@@ -50,7 +50,7 @@ export function Twins() {
                   ? { top: `${index * 25}%`, left: `${index * 20}%` }
                   : {
                       left: index % 2 === 0 ? '20%' : '-20%',
-                      marginTop: index % 2 === 0 ? 0 : '50px',
+                      marginTop: index % 2 === 0 ? '-10px' : '50px',
                     }
               }
             >
