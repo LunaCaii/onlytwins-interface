@@ -7,7 +7,7 @@ export function Screen() {
   ]
 
   return (
-    <div className="main-layout">
+    <div className="main-layout max-lg:bg-chain max-lg:bg-cover max-lg:!pt-52 max-lg:!-mt-64 max-lg:!pb-14">
       <ul className="lg:flex hidden">
         {screens.map((screen, index) => (
           <li

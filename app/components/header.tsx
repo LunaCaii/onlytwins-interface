@@ -52,7 +52,7 @@ export function Header() {
 
   return (
     <animated.ul
-      className="fixed flex z-10 bg-nav-bg rounded-full px-16 py-4 left-1/2 -translate-x-1/2 space-x-[55px] overflow-x-auto whitespace-nowrap"
+      className="fixed hidden lg:flex z-10 bg-nav-bg rounded-full px-16 py-4 left-1/2 -translate-x-1/2 space-x-[55px] overflow-x-auto whitespace-nowrap"
       style={headerStyle}
     >
       {menus.map((i) => (
