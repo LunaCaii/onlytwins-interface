@@ -6,8 +6,15 @@ export function Screen() {
     '/screen-4.svg',
   ]
 
+  const screensmb = [
+    '/screen-1.png',
+    '/screen-2.png',
+    '/screen-3.png',
+    '/screen-4.png',
+  ]
+
   return (
-    <div className="main-layout max-lg:bg-chain max-lg:bg-cover max-lg:!pt-52 max-lg:!-mt-64 max-lg:!pb-14">
+    <div className="main-layout max-lg:bg-chain max-lg:bg-cover max-lg:!pt-52 max-lg:!-mt-64 max-lg:!pb-14 max-lg:!px-0">
       <ul className="lg:flex hidden">
         {screens.map((screen, index) => (
           <li
@@ -22,23 +29,28 @@ export function Screen() {
       </ul>
 
       {/* Mobile */}
-      <div className="lg:hidden flex">
-        <ul>
-          {screens.slice(0, screens.length / 2).map((screen, index) => (
-            <li key={index} className="mt-32 first:mt-0">
-              <img src={screen} alt="" className="block w-fit h-fit" />
-            </li>
-          ))}
-        </ul>
-        <ul className="mt-24 -ml-20">
-          {screens
-            .slice(screens.length / 2, screens.length)
-            .map((screen, index) => (
-              <li key={index} className="mt-32 max-w-full">
-                <img src={screen} alt="" className="block w-full" />
+      <div className="lg:hidden flex flex-wrap justify-center">
+        <div className="w-1/2 px-2">
+          <ul>
+            {screensmb.slice(0, screensmb.length / 2).map((screen, index) => (
+              <li key={index} className="mt-24 first:mt-0">
+                <img src={screen} alt="" className="w-full h-auto" />
               </li>
             ))}
-        </ul>
+          </ul>
+        </div>
+
+        <div className="w-1/2 px-2 -ml-[69px] mt-20">
+          <ul>
+            {screensmb
+              .slice(screensmb.length / 2, screensmb.length)
+              .map((screen, index) => (
+                <li key={index} className="mt-32 max-w-full">
+                  <img src={screen} alt="" className="w-full h-auto" />
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   )

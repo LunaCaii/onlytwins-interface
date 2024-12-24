@@ -26,10 +26,10 @@ export function AiGirlFriend() {
       <ul className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-12 lg:mt-24">
         {aoGirlfriendIntr.map((i) => (
           <li
-            className="relative w-[270px] mt-10 px-5 py-9 lg:px-12 lg:py-14 lg:mt-0 lg:w-full overflow-hidden grid-rows-3"
+            className="relative w-[270px] mt-10 px-5 lg:px-12 lg:py-14 lg:mt-0 lg:w-full overflow-hidden grid-rows-3"
             key={i.label}
           >
-            <div className="absolute inset-0 bg-no-repeat bg-center bg-[length:100%_100%] z-[-1] bg-rectangle-bg" />
+            <div className="absolute inset-0 bg-no-repeat h-full bg-cover z-[-1] bg-rectangle-bg" />
 
             <p className="text-white text-center lg:text-left font-montserrat-bold text-[18px] lg:text-[29px] font-black leading-normal">
               {i.label}

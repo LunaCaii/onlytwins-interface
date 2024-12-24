@@ -1,35 +1,15 @@
 export function Nsfw() {
-  const faqs = [
-    {
-      q: 'Who can use OnlyTwins?',
-      a: 'OnlyTwins is exclusively for adults aged 18+ who are interested in exploring virtual companionship and fantasies. Whether you’re new to the world of AI or a seasoned enthusiast, our platform offers immersive AI chat experiences and customizable interactions in a safe and private environment.',
-    },
-    {
-      q: 'How do you ensure user privacy?',
-      a: 'User privacy is our top priority. OnlyTwins uses end-to-end encryption (E2E) for all communications, supports anonymous sessions, and does not require personal identification to access the platform.',
-    },
-    {
-      q: 'Is my data secure?',
-      a: 'Absolutely. We implement advanced encryption and best-in-class security practices to ensure all user data is protected and securely stored.',
-    },
-    {
-      q: 'Do you store any personal information?',
-      a: 'We collect minimal personal information to enhance your experience. While messages are stored to ensure continuity in your interactions, they are encrypted to prevent unauthorized access, even by our staff.',
-    },
-    {
-      q: 'How do I get support if I have an issue with OnlyTwins?',
-      a: 'Our dedicated support team is available to assist you. Please reach out via the contact email provided on our contact page or refer to the complaint process outlined in our Terms of Service.',
-    },
-  ]
-
   return (
-    <div id="FAQ" className="main-layout grid grid-cols-2 !mt-32 !pb-52">
-      <h2 className="text-white font-montserrat-bold text-[71px] font-extrabold leading-[71px]">
+    <div
+      id="FAQ"
+      className="main-layout lg:grid lg:grid-cols-2 lg:!mt-32 !pb-52"
+    >
+      <h2 className="text-white font-montserrat-bold text-center lg:text-start text-[35px] lg:text-[71px] font-extrabold leading-[40px] lg:leading-[71px]">
         AI Girlfriend NSFW <br />
         Sex Chat
       </h2>
 
-      <div className="text-[#EEECEA] font-montserrat text-[22px] not-italic font-normal leading-normal">
+      <div className="text-[#EEECEA] font-montserrat text-center lg:text-start mt-8 lg:mt-0 text-[14px] lg:text-[22px] not-italic font-normal leading-normal">
         <p>
           OnlyTwins redefines AI companionship with lifelike virtual
           personalities powered by the $TWINS token. Whether you seek intimate
@@ -58,7 +38,9 @@ export function Nsfw() {
           the future of digital companionship—all powered by the $TWINS token.
         </p>
         <br />
-        <p>Start your journey with OnlyTwins today.</p>
+        <p className="max-lg:font-montserrat-bold">
+          Start your journey with OnlyTwins today.
+        </p>
       </div>
     </div>
   )

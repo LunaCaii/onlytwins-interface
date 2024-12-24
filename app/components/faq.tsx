@@ -24,18 +24,18 @@ export function FAQ() {
 
   return (
     <div id="FAQ" className="main-layout flex flex-col !mt-20">
-      <h2 className="text-white font-montserrat-bold text-[71px] font-extrabold leading-[71px]">
+      <h2 className="text-white font-montserrat-bold text-center lg:text-start text-[35px] lg:text-[71px] font-extrabold leading-[40px] lg:leading-[71px]">
         Frequently Asked <br /> Questions
       </h2>
 
-      <ul className="mt-14">
+      <ul className="mt-8 lg:mt-14">
         {faqs.map((x) => (
           <li className="mt-8" key={x.q}>
-            <div className="text-[#EEECEA] font-montserrat text-[22px] break-words overflow-hidden">
+            <div className="text-[#EEECEA] text-center lg:text-start font-montserrat-bold text-[14px] lg:text-[22px] break-words overflow-hidden">
               {x.q}
             </div>
 
-            <p className="text-[#EEECEA] font-montserrat text-[16px] font-thin">
+            <p className="text-[#EEECEA] text-center lg:text-start font-montserrat text-[13px] mt-3 lg:mt-0 lg:text-[16px] font-thin">
               {x.a}
             </p>
           </li>
