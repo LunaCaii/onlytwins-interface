@@ -40,6 +40,12 @@ export function Header() {
     // background: scrollY > 50 ? 'rgba(89, 89, 89, 1)' : 'rgba(89, 89, 89, 0.50)',
   })
 
+  const mbHeaderStyle = useSpring({
+    opacity: openMbMenu ? 1 : 0,
+    transform: openMbMenu ? 'translateY(0%)' : 'translateY(-100%)',
+    config: { duration: 500 },
+  })
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY)
@@ -82,10 +88,11 @@ export function Header() {
         />
       </animated.div>
 
-      {openMbMenu && (
+      {
         <animated.ul
-          className="!fixed z-20 top-0 w-screen rounded-b-2xl left-0 bg-[#595959] py-4 min-h-[60vh] max-h-screen overflow-x-scroll"
-          style={{ transition: 'all 2s ease' }}
+          className="!fixed z-20 top-0 w-screen rounded-b-2xl left-0 bg-[#595959] py-4 min-h-[60vh] max-h-screen overflow-y-scroll"
+          aria-hidden={!openMbMenu}
+          style={mbHeaderStyle}
         >
           <li
             className="text-right px-8 text-white mt-5"
@@ -97,17 +104,15 @@ export function Header() {
             <li
               className="font-montserrat-bold text-white px-8 text-[18px] font-normal leading-normal cursor-pointer select-none mt-6 first:mt-0"
               key={i.text}
+              role="menuitem"
             >
-              <Link
-                to={i.link}
-                onClickCapture={() => setOpenMbMenu(!openMbMenu)}
-              >
+              <Link to={i.link} onClick={() => setOpenMbMenu(!openMbMenu)}>
                 {i.text}
               </Link>
             </li>
           ))}
         </animated.ul>
-      )}
+      }
     </>
   )
 }
