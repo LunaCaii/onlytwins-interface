@@ -73,7 +73,7 @@ export function Header() {
         ))}
       </animated.ul>
       <animated.div
-        className="fixed flex justify-between z-10 bg-nav-bg rounded-full box-border px-5 py-1 left-1/2 -translate-x-1/2"
+        className="fixed lg:hidden flex justify-between z-10 bg-nav-bg rounded-full box-border px-5 py-1 left-1/2 -translate-x-1/2"
         style={headerStyle}
       >
         <Link to="/">
