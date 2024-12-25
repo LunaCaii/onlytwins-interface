@@ -31,6 +31,7 @@ const menus = [
 
 export function Header() {
   const [scrollY, setScrollY] = useState(0)
+  const [openMbMenu, setOpenMbMenu] = useState(false)
 
   const headerStyle = useSpring({
     top: scrollY > 50 ? '0 !important' : '48px',
@@ -51,18 +52,62 @@ export function Header() {
   }, [])
 
   return (
-    <animated.ul
-      className="fixed hidden lg:flex z-10 bg-nav-bg rounded-full px-16 py-4 left-1/2 -translate-x-1/2 space-x-[55px] overflow-x-auto whitespace-nowrap"
-      style={headerStyle}
-    >
-      {menus.map((i) => (
-        <li
-          className="font-montserrat text-white text-[23px] font-normal leading-normal cursor-pointer select-none"
-          key={i.text}
+    <>
+      <animated.ul
+        className="fixed hidden lg:flex z-10 bg-nav-bg rounded-full px-16 py-4 left-1/2 -translate-x-1/2 space-x-[55px] overflow-x-auto whitespace-nowrap"
+        style={headerStyle}
+      >
+        {menus.map((i) => (
+          <li
+            className="font-montserrat text-white text-[23px] font-normal leading-normal cursor-pointer select-none"
+            key={i.text}
+          >
+            <Link to={i.link}>{i.text}</Link>
+          </li>
+        ))}
+      </animated.ul>
+      <animated.div
+        className="fixed flex justify-between z-10 bg-nav-bg rounded-full box-border px-5 py-1 left-1/2 -translate-x-1/2"
+        style={headerStyle}
+      >
+        <Link to="/">
+          <img src="/onlytwins.ai.svg" className="w-[100px]" alt="" />
+        </Link>
+
+        <img
+          src="/menu.svg"
+          className="w-[40px]"
+          alt=""
+          onClick={() => setOpenMbMenu(!openMbMenu)}
+        />
+      </animated.div>
+
+      {openMbMenu && (
+        <animated.ul
+          className="!fixed z-20 top-0 w-screen rounded-b-2xl left-0 bg-[#595959] py-4 min-h-[60vh] max-h-screen overflow-x-scroll"
+          style={{ transition: 'all 2s ease' }}
         >
-          <Link to={i.link}>{i.text}</Link>
-        </li>
-      ))}
-    </animated.ul>
+          <li
+            className="text-right px-8 text-white mt-5"
+            onClick={() => setOpenMbMenu(!openMbMenu)}
+          >
+            X
+          </li>
+          {menus.map((i) => (
+            <li
+              className="font-montserrat-bold text-white px-8 text-[18px] font-normal leading-normal cursor-pointer select-none mt-6 first:mt-0"
+              key={i.text}
+            >
+              <Link
+                to={i.link}
+                onClickCapture={() => setOpenMbMenu(!openMbMenu)}
+              >
+                {i.text}
+              </Link>
+            </li>
+          ))}
+        </animated.ul>
+      )}
+    </>
   )
 }
