@@ -10,7 +10,7 @@ export function Footer() {
   ]
   return (
     <div className="lg:flex lg:bg-white">
-      <img src="/fb-logo.svg" className="" alt="" />
+      <img src="/fb-logo.svg" className="max-lg:w-full" alt="" />
       <div className="max-lg:bg-white lg:flex lg:flex-row-reverse lg:w-full">
         <div className="max-lg:main-layout flex lg:flex-col justify-center lg:items-start lg:w-1/2">
           <div className="max-lg:w-[70vw] lg:w-auto w-full">
