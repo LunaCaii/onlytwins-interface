@@ -29,6 +29,41 @@ const menus = [
   },
 ]
 
+const medias = [
+  {
+    name: 'tiktok',
+    icon: '/tiktok.svg',
+    link: 'https://www.tiktok.com/@onlytwins.ai',
+  },
+  {
+    name: 'x',
+    icon: '/x.svg',
+    link: 'https://x.com/OnlyTwins_ai',
+  },
+  {
+    name: 'instagram',
+    icon: '/instagram.svg',
+    link: 'https://www.instagram.com/onlytwins.ai/',
+  },
+]
+
+const Media = () => {
+  return (
+    <ul className="flex items-center gap-1 lg:gap-3 mr-2 lg:mr-8">
+      {medias.map((x) => (
+        <li
+          className="border-2 lg:border-4 border-white rounded-full p-[2px] cursor-pointer"
+          key={x.name}
+        >
+          <Link to={x.link} target="_blank">
+            <img src={x.icon} className="lg:max-w-max" alt={x.name} />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export function Header() {
   const [scrollY, setScrollY] = useState(0)
   const [openMbMenu, setOpenMbMenu] = useState(false)
@@ -59,33 +94,41 @@ export function Header() {
 
   return (
     <>
-      <animated.ul
-        className="fixed hidden lg:flex z-10 bg-nav-bg rounded-full px-16 py-4 left-1/2 -translate-x-1/2 space-x-[55px] overflow-x-auto whitespace-nowrap"
-        style={headerStyle}
-      >
-        {menus.map((i) => (
-          <li
-            className="font-montserrat text-white text-[23px] font-normal leading-normal cursor-pointer select-none"
-            key={i.text}
-          >
-            <Link to={i.link}>{i.text}</Link>
-          </li>
-        ))}
-      </animated.ul>
       <animated.div
-        className="fixed lg:hidden flex justify-between z-10 bg-nav-bg rounded-full box-border px-5 py-1 left-1/2 -translate-x-1/2"
+        className="fixed hidden lg:flex z-10 left-1/2 -translate-x-1/2"
         style={headerStyle}
       >
-        <Link to="/">
-          <img src="/onlytwins.ai.svg" className="w-[100px]" alt="" />
-        </Link>
+        <Media />
+        <ul className="hidden lg:flex z-10 bg-nav-bg rounded-full px-16 py-4 space-x-[55px]  w-full">
+          {menus.map((i) => (
+            <li
+              className="font-montserrat text-white text-[23px] font-normal leading-normal cursor-pointer select-none whitespace-nowrap"
+              key={i.text}
+            >
+              <Link to={i.link}>{i.text}</Link>
+            </li>
+          ))}
+        </ul>
+      </animated.div>
 
-        <img
-          src="/menu.svg"
-          className="w-[40px]"
-          alt=""
-          onClick={() => setOpenMbMenu(!openMbMenu)}
-        />
+      {/* Mobile Nav */}
+      <animated.div
+        className="fixed lg:hidden flex justify-between z-10 box-border left-[40%] -translate-x-[40%]"
+        style={headerStyle}
+      >
+        <Media />
+        <div className="flex items-center bg-nav-bg rounded-full border-2 px-3 py-1">
+          <Link to="/">
+            <img src="/onlytwins.ai.svg" className="w-[100px]" alt="" />
+          </Link>
+
+          <img
+            src="/menu.svg"
+            className="w-[40px]"
+            alt=""
+            onClick={() => setOpenMbMenu(!openMbMenu)}
+          />
+        </div>
       </animated.div>
 
       {
