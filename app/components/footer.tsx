@@ -24,7 +24,7 @@ export function Footer() {
       return
     }
 
-    const res = await fetch('http://13.212.251.24:3000/subscribe', {
+    const res = await fetch('https://13.212.251.24/subscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
